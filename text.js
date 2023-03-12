@@ -9,6 +9,9 @@ function getinputdata(){
     inputdata.value = ""
 }
 
+
+//TASK - 2 SHOW / HIDE Pwd //
+
 function showpassword(){
     
     let inputpassword = document.getElementById("Inputpwd")
@@ -22,6 +25,7 @@ function showpassword(){
         showbutton.innerText = "hide"
     } else{
         inputpassword.type === "password"
+        inputpassword.type = "password"
         showbutton.innerText = "show"
     }
 
