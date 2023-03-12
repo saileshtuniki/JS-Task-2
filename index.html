@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="inputbox1">
+        <input id="exampleInputEmail1" type="text" placeholder="Enter some text" >
+        
+        <button id="submit-btn" onclick="getinputdata()" type="ADD" class=" btn btn-primary">Submit</button>
+
+        <h2 id="h2ref">  No Data</h2>
+    </div>
+
+    <div id="inputbox1">
+        <h2 id="h2pwd"> Show/Hide password </h2>
+        <input id="Inputpwd" type="password" placeholder="Enter password" >
+        
+        <button id="show-btn" onclick="showpassword()" class=" btn btn-success"><h6 id="show-hide" class="mb-1">Show</h6></button>
+
+    </div>
+
+
+    <script src="text.js"></script>
 </body>
 </html>

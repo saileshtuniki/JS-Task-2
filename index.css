@@ -1,0 +1,24 @@
+#h2ref{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #d84f25;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: capitalize;
+
+}
+
+#inputbox1{
+    
+    width: 500px;
+    border: 2px solid black;
+    padding: 50px;
+    margin-top: 30px;
+    margin: 250px auto ;
+    text-align: center;
+
+}
