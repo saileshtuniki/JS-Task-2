@@ -22,3 +22,19 @@
     text-align: center;
 
 }
+
+#cardhead{
+    width:  500px;
+    border: 3px solid black;
+    padding: 50px auto;
+    margin: 200px auto;
+    margin-top: 20px auto;
+    text-align: left;
+    justify-content: left;
+}
+
+#profile-btn{
+    margin-left: 10px;
+    margin-bottom: 15px;
+
+}
