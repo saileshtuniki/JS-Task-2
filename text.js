@@ -30,3 +30,33 @@ function showpassword(){
     }
 
 }
+
+//Darkmode Function//
+
+function theamChange(){
+    let darktheam = document.getElementById("check-btn")
+    let divdark = document.getElementById("cardhead")
+    let title = document.getElementById("modetitle")
+    let texttheam = document.getElementById("textcolor")
+    let profilebutton = document.getElementById("profile-btn")
+    // let checkbutton = document.querySelector("#check-btn")
+     
+    if(darktheam.checked ){
+        //If checked
+        console.log("checked")
+        divdark.style.backgroundColor= "black"
+        texttheam.style.color = "white"   
+        title.style.color = "white"
+        profilebutton.style.backgroundColor = "Orange"   
+         
+    }else{
+        //If unCheck
+        console.log("not checked")
+        divdark.style.backgroundColor = "white"
+        texttheam.style.color = "black"
+        title.style.color = "black"
+        profilebutton.style.backgroundColor = "white" 
+    }
+
+
+}

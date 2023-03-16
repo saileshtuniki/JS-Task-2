@@ -9,6 +9,51 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="cardhead">
+        <div id="carddetails" class="card-body">
+            <h4 id="modetitle">Click On ( Checkbox ) DarkMode / LightMode </h4>
+          <input type="checkbox" class="checkbutton" onclick = "theamChange()" id="check-btn">  
+          <!-- <label for="check-btn">Darkmode</label> -->
+          <br><br/>
+          <!-- <p id="textcolor"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati assumenda a expedita nisi nesciunt natus inventore magni quo voluptas placeat, repudiandae veniam eos, asperiores aliquid quod pariatur deleniti cum!</p> -->
+
+          <table id="textcolor" class="table">
+            <thead >
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Sailesh</td>
+                <td>T</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Vamshi</td>
+                <td>S</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td >Bittu</td>
+                <td>R</td>
+                <td>Male</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <button id="profile-btn">Profile</button>
+            
+    </div>
+
+
     <div id="inputbox1">
         <input id="exampleInputEmail1" type="text" placeholder="Enter some text" >
         
@@ -25,22 +70,7 @@
 
     </div>
 
-    <div id="cardhead">
-        <div id="carddetails" class="card-body">
-            <table id="tabledata">
-              <thead>
-                <tr>
-                    <th scope="col">S.no</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">S.no</th>
-                </tr>
-              </thead>
-            </table>
-        </div>
-        <button id="profile-btn" class="btn btn-primary" >Profile</button>
-            
-    </div>
-
+    
 
     <script src="text.js"></script>
 </body>
