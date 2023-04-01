@@ -1,12 +1,33 @@
-function getinputdata(){
-    let inputdata = document.getElementById("exampleInputEmail1")
-    let h2Ref = document.getElementById("h2ref")
+// function getinputdata(){
+//     let inputdata = document.getElementById("exampleInput")
+//     let h2Ref = document.getElementById("h2ref")
 
-    let inputvalue = inputdata.value
-    h2Ref.innerText = inputvalue
+//     let inputvalue = inputdata.value
+//     h2Ref.innerText = inputvalue
 
+//     //It clears the data in text box 
+//     inputdata.value = ""
+// }
+
+// CREATING HTML Elements dynamically Using DOM //
+
+    let olref = document.createElement("ol")
+    function displaylist(){
+    let inputref1 = document.getElementById("Inputref")
+    
+    let userdata = inputref1.value 
+    
+    // let olref = document.createElement("ol")
+
+    let liref = document.createElement("li")
+
+    liref.innerText = userdata
+
+    olref.appendChild(liref) 
+  
+    document.getElementById("inputdiv1").appendChild(olref)
     //It clears the data in text box 
-    inputdata.value = ""
+    inputref1.value = " "
 }
 
 

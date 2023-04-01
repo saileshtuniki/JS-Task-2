@@ -12,6 +12,26 @@
 
 }
 
+#inputdiv1{
+    
+    width: 500px;
+    border: 2px solid black;
+    padding: 50px;
+    margin-top: 30px;
+    margin: 250px auto ;
+    text-align: center;
+}
+
+#inputdiv{
+    
+    width: 500px;
+    border: 2px solid black;
+    padding: 50px;
+    margin-top: 30px;
+    margin: 250px auto ;
+    text-align: center;
+}
+
 #inputbox1{
     
     width: 500px;
