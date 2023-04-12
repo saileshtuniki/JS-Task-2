@@ -1,19 +1,47 @@
-// function getinputdata(){
-//     let inputdata = document.getElementById("exampleInput")
-//     let h2Ref = document.getElementById("h2ref")
+function showtable(){
+    let tablerow = document.getElementById("row")
+    let showbutton = document.getElementById("btn-show")
+    let hidebutton = document.getElementById("btn-hide")
 
-//     let inputvalue = inputdata.value
-//     h2Ref.innerText = inputvalue
 
-//     //It clears the data in text box 
-//     inputdata.value = ""
-// }
+
+    tablerow.style.display = "block"
+    hidebutton.disabled = false;
+    showbutton.disabled = true;
+
+    }
+
+function hidetable(){
+    let hidebutton = document.getElementById("btn-hide")
+    let tablerow = document.getElementById("row")
+    let showbutton = document.getElementById("btn-show")
+    
+   tablerow.style.display = "none"
+   hidebutton.disabled = true;
+   showbutton.disabled = false; 
+
+}
+
+
+
+function getinputdata(){
+    let inputdata = document.getElementById("exampleInput")
+    let h2Ref = document.getElementById("h2ref")
+
+    let inputvalue = inputdata.value
+    h2Ref.innerText = inputvalue
+
+    //It clears the data in text box 
+    inputdata.value = ""
+}
 
 // CREATING HTML Elements dynamically Using DOM //
 
     let olref = document.createElement("ol")
     function displaylist(){
     let inputref1 = document.getElementById("Inputref")
+    // let h2ref2 = document.getElementById("h2id")
+    // h2ref2.remove()
     
     let userdata = inputref1.value 
     
