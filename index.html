@@ -35,6 +35,17 @@
         <button id="btn-show" onclick="showtable()" class="btn btn-success">Show table</button>
         <button id="btn-hide" onclick="hidetable()" disabled class="btn btn-danger">Hide table</button>
       
+      <div class="row mt-5" id="radiorow" style="display: none">
+        <div class="col-2">
+          <input type="radio" value="all" name="gender" checked  onclick="filterdata('all')"/>all
+        </div>
+        <div class="col-2">
+          <input type="radio" value="male" name="gender" onclick="filterdata('male')"/>male
+        </div>
+        <div class="col-2">
+          <input type="radio" value="female" name="gender" onclick="filterdata('female')"/>female
+        </div>
+      </div>
       
       <div id="row" class="row mt-3" style="display: none">
         <table class="table ">

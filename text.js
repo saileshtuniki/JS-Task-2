@@ -1,4 +1,4 @@
-var trids = [];
+let trids = [];
 
 let userdetails = [
     {
@@ -89,14 +89,44 @@ let userdetails = [
     },
   ];
 
+let tempdata = userdetails;
+
+function filterdata(data){  
+
+      trids.forEach(function(ele){
+      document.getElementById(ele).remove();
+      });
+      trids = [];
+      
+      if(data === 'male'){
+        tempdata = userdetails.filter(function(ele){
+          console.log("male")
+          return ele.gender === 'male';
+        })
+      }
+      else if(data === 'female'){
+        tempdata = userdetails.filter(function(ele){
+          console.log("female")
+          return ele.gender === 'female';
+        })
+      } else {
+        console.log("all")
+        tempdata = userdetails;
+      }
+
+     
+      showtable();
+}
+
 
 function showtable(){
     let tablerow = document.getElementById("row")
+    let radiobuttonrow = document.getElementById("radiorow")
     let showbutton = document.getElementById("btn-show")
     let hidebutton = document.getElementById("btn-hide")
     let tablebody = document.getElementById("tbodyref")
 
-    userdetails.map(function(element, index){
+   tempdata.map(function(element, index){
         //create the row
         let tr = document.createElement("tr")  
 
@@ -135,6 +165,8 @@ function showtable(){
        
     })
 
+    radiobuttonrow.style.display = "block"
+    radiobuttonrow.removeAttribute("style");
     tablerow.style.display = "block"
     hidebutton.disabled = false;
     showbutton.disabled = true;
@@ -142,22 +174,28 @@ function showtable(){
 
     }
 
+   
+
 
     function hidetable(){
-      let tablerow = document.getElementById("row")
-      let hidebutton = document.getElementById("btn-hide")
-      let showbutton = document.getElementById("btn-show")
+      let tablerow = document.getElementById("row");
+      let radiobuttonrow = document.getElementById("radiorow");
+      let hidebutton = document.getElementById("btn-hide");
+      let showbutton = document.getElementById("btn-show");
 
      
-     console.log(trids);
+    
 
-     trids.map(function(ele){
+    //  trids.map(function(ele){
+     trids.forEach(function(ele){
         document.getElementById(ele).remove()
-     })
+     });
 
-      tablerow.style.display = "block"
-      hidebutton.disabled = false;
-      showbutton.disabled = true;
+
+     tablerow.style.display = "none";
+     radiobuttonrow.style.display = "none";
+      hidebutton.disabled = true;
+      showbutton.disabled = false;
 
       trids = [];
 
@@ -165,16 +203,16 @@ function showtable(){
 
     
 
-function hidetable(){
-    let hidebutton = document.getElementById("btn-hide")
-    let tablerow = document.getElementById("row")
-    let showbutton = document.getElementById("btn-show")
+// function hidetable(){
+//     let hidebutton = document.getElementById("btn-hide")
+//     let tablerow = document.getElementById("row")
+//     let showbutton = document.getElementById("btn-show")
     
-   tablerow.style.display = "none"
-   hidebutton.disabled = true;
-   showbutton.disabled = false; 
+//    tablerow.style.display = "none"
+//    hidebutton.disabled = true;
+//    showbutton.disabled = false; 
 
-}
+// }
 
 
 
@@ -263,71 +301,3 @@ function theamChange(){
 
 
 }
-
-
-
-// let tr1 = document.createElement("tr")  
-    // let tr2 = document.createElement("tr")  
-    // let td1 = document.createElement("td")   
-    // let td2 = document.createElement("td")
-    // let td3 = document.createElement("td")
-    // let td4 = document.createElement("td")
-    // let td5 = document.createElement("td")
-    // let img = document.createElement("img")
-
-    // let td6 = document.createElement("td")  // <tr> <td> ... </td> </tr>
-    // let td7 = document.createElement("td")   
-    // let td8 = document.createElement("td")
-    // let td9 = document.createElement("td")
-    // let td10 = document.createElement("td")
-   
-    // let img2 = document.createElement("img")
-
-
-
-    // img.src = userdetails[0].image
-    // img.height = 50
-    // img.width = 50
-    // td1.appendChild(img)
-
-
-    // img2.src = userdetails[1].image
-    // img2.height = 50
-    // img2.width = 50
-    // td2.appendChild(img2)
-
-
-
-    // td2.innerText = userdetails[0].name
-    // td3.innerText = userdetails[0].gender
-    // td4.innerText = userdetails[0].email
-    // td5.innerText = userdetails[0].city
-
-
-    // td6.innerText = userdetails[1].name
-    // td7.innerText = userdetails[1].gender
-    // td8.innerText = userdetails[1].email
-    // td9.innerText = userdetails[1].city
-
-
-    
-    // tr1.appendChild(td1) 
-    // tr1.appendChild(td2) 
-    // tr1.appendChild(td3) 
-    // tr1.appendChild(td4) 
-    // tr1.appendChild(td5) 
-
-    // tr2.appendChild(td6) 
-    // tr2.appendChild(td7) 
-    // tr2.appendChild(td8) 
-    // tr2.appendChild(td9) 
-    // tr2.appendChild(td10)
-   
-    // tablebody.appendChild(tr1)
-    // tablebody.appendChild(tr2)
-
-    // tablerow.style.display = "block"
-    // hidebutton.disabled = false;
-    // showbutton.disabled = true;
-
-    // }
